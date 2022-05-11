@@ -1,0 +1,510 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #747474;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+header.main_header {
+  margin: 0px 4.5px;
+  padding: 0px 20px;
+}
+
+.main_header {
+  height: 100px;
+}
+
+#logo {
+  float: left;
+  max-width: 268px;
+  max-height: 33px;
+  position: fixed;
+}
+
+div.inner_header {
+    margin: 0px 4.5px;
+    padding: 0px 20px;
+}
+
+ul.navbar-menu {
+  padding: 19.95px 0px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-right: 62px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 20px 0px 0px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+section {
+  text-align: center;
+  margin: 33px 212.5px 60px;
+  padding: 0px 20px;
+}
+
+img.logo2 {
+  padding: 0px 467.5px;
+}
+
+.textgrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+section.top-section h1 {
+  color: #00b39b;
+  font: 34px;
+  margin: 34px 0px;
+}
+
+div.col-2 {
+  padding: 10px;
+  font: 16px;
+}
+
+.textgrid p {
+  display: grid;
+  font-size: 14px;
+  font-family: roboto, arial, sans-serif;
+  color: #747474;
+  margin: 12.8px 0px;
+}
+
+/* Services */
+
+.services {
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  max-width: 1015px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.service-items_patients {
+    background-color: #00b39b;
+    padding: 22px 20px 0px;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.service-items_doctors {
+    background-color: #3d83df;
+    border-radius: 10px;
+    list-style: none;
+    padding: 22px 20px 0px;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.service-items_clinics {
+    background-color: #1b2734;
+    border-radius: 10px;
+    list-style: none;
+   padding:    22px 20px 0px;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.service-items p {
+  font-size: 1.625em;
+  color: white;
+  margin: 7.8px 0 28px;
+  display: block;
+}
+.service-items h2 {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 14px;
+}
+
+.col-3 img {
+    margin: 0px 0px -6.4px;
+  margin-right: 40%;
+}
+
+select {
+  min-height: 40px;
+  border-radius: 4px;
+  border: none;
+  width: max-content;
+  padding: 0 38.4px 0 0px;
+  font: 19.2px;
+  text-decoration: underline;
+  color: #ffffff;
+  background: none;
+}
+
+.select-menu {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Brand parters */
+
+section.partners {
+  margin: 40px 4.5px 50px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1015px;
+  box-sizing: border-box;
+}
+
+.partners h1 {
+  font-size: 26px;
+  width: 33%;
+  padding: 0 26px 0 0;
+  line-height: 33.8px;
+  font-family: montserrat;
+  color: #00b39b;
+}
+.partners ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+.partners li {
+  min-width: 160px;
+  padding: 10px 0;
+}
+
+.partners svg {
+  height: 20px;
+  width: auto;
+  max-width: 100%;
+  padding-left: 10px;
+  fill: hsla(0, 0%, 67%, 0.7);
+}
+
+/* Statistics*/
+
+.stats {
+  background-color: #e5faf8;
+  background-image: url(https://prowly-uploads.s3.eu-west-1.amazonaws.com/uploads/4819/assets/44063/doktortakvimi-mktpl-symbol-turquoise.png);
+  background-repeat: no-repeat;
+  background-size: 456px 435px;
+  background-position: 15% 145%;
+}
+
+div.col-2 {
+    padding: 10px;
+    }
+
+div.textgrid {
+    margin: 0px 10px;
+}
+
+div.stat-details {
+    background-color: white;
+    border-radius: 5px;
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+    width: 40%;
+    height: 250px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+section.stat {
+  padding: 50px 0px 88px;
+  margin: 30px 0px 10px;
+  text-align: center;
+}
+
+.stat-content {
+  margin: 50px auto 88px;
+  padding: 15px 0 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1050px;
+}
+
+h3 {
+  font-size: 34px;
+  line-height: 44.2px;
+  margin: 12px 0px;
+  color: #00b39b;
+}
+p {
+  margin: 22.4px 0;
+  max-width: 415px;
+  line-height: 24px;
+  font: 13px;
+}
+
+.stat-text {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.stat-details div:first-child {
+  margin-top: 35px;
+}
+.stat-details div:last-child {
+  position: relative;
+  bottom: 25px;
+}
+.stat-details h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 31.2px;
+  margin: 12px 0;
+}
+.stat-details p {
+  font-size: 13px;
+  line-height: 16.9px;
+  margin: 0;
+
+}.stat-details {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    width: 50%;
+    margin-right: 5px;
+}
+
+.stat-text p {
+    margin: 22.4px 0;
+    max-width: 415px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+
+
+
+/* Offices */
+
+section.offices {
+  max-width: 1050px;
+  margin: 88px 4.5px 80px;
+  padding: 0px 20px;
+}
+
+div.offices {
+  padding: 10px;
+}
+.offices h2 {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 300;
+}
+.office-header p {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 22.4px 0;
+}
+.office-header {
+  max-width: 460px;
+  text-align: center;
+  margin: 0 auto 67px;
+}
+
+div.office_desc {
+  padding: 20px;
+  font: 18px;
+}
+
+span.btn.btn--small {
+  color: #ffffff;
+  font: 10px;
+  background: #3d83df;
+  padding: 10px 15px;
+}
+.locations {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin: 88px 0px 80px;
+}
+.locations a {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 311px;
+  text-decoration: none;
+  color: #747474;
+}
+.locations a:hover {
+  box-shadow: 5px 10px #8888;
+}
+.locations a p {
+  font-size: 20px;
+  margin: 0;
+  font-family: montserrat;
+}
+.locations div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.locations button {
+  border: 0;
+  border-radius: 4px;
+  background: #3d83df;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 10px;
+}
+.locations button:hover {
+  color: #fff;
+  background: #1662c6;
+}
+
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+a {
+  color: #ababab;
+}
+
+a:active,
+a:hover {
+  color: #00b39b;
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font: 24px;
+}
+
+img {
+  border: 0;
+}
+
+figure {
+  display: block;
+  margin: 1em 40px;
+}
+
+section.join-us {
+  align-items: center;
+}
+
+section.join-us h1 {
+  font: 30px;
+  margin: 0px 0px 22.5px;
+}
+
+a.btn {
+  font: 12px;
+  background: #3d83df;
+  padding: 14px 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  margin: 0;
+  padding: 12px 20px;
+  border-top: 1px solid rgb(238, 242, 242);
+  min-width: 100%;
+}
+footer p {
+  font-size: 12px;
+  color: #ababab;
+  margin: 19.2px auto 4.8px;
+  font-family: montserrat;
+}
+footer a {
+  text-decoration: none;
+  color: #3d83df;
+  font-family: montserrat;
+}
