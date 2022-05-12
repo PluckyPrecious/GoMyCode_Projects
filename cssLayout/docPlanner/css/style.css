@@ -31,8 +31,8 @@ header.main_header {
 }
 
 div.inner_header {
-    margin: 0px 4.5px;
-    padding: 0px 20px;
+  margin: 0px 4.5px;
+  padding: 0px 20px;
 }
 
 ul.navbar-menu {
@@ -126,8 +126,7 @@ div.col-2 {
 /* Services */
 
 .services {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
   box-sizing: border-box;
   max-width: 1015px;
   margin: 0 auto;
@@ -135,48 +134,48 @@ div.col-2 {
 }
 
 .service-items_patients {
-    background-color: #00b39b;
-    padding: 22px 20px 0px;
-    text-align: center;
-    width: 40%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5px;
-    border-radius: 10px;
+  background-color: #00b39b;
+  padding: 22px 20px 0px;
+  text-align: center;
+  width: 40%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
+  border-radius: 10px;
 }
 
 .service-items_doctors {
-    background-color: #3d83df;
-    border-radius: 10px;
-    list-style: none;
-    padding: 22px 20px 0px;
-    text-align: center;
-    width: 40%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5px;
+  background-color: #3d83df;
+  border-radius: 10px;
+  list-style: none;
+  padding: 22px 20px 0px;
+  text-align: center;
+  width: 40%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .service-items_clinics {
-    background-color: #1b2734;
-    border-radius: 10px;
-    list-style: none;
-   padding:    22px 20px 0px;
-    text-align: center;
-    width: 40%;
-    height: 250px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5px;
+  background-color: #1b2734;
+  border-radius: 10px;
+  list-style: none;
+  padding: 22px 20px 0px;
+  text-align: center;
+  width: 40%;
+  height: 250px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .service-items p {
@@ -191,7 +190,7 @@ div.col-2 {
 }
 
 .col-3 img {
-    margin: 0px 0px -6.4px;
+  margin: 0px 0px -6.4px;
   margin-right: 40%;
 }
 
@@ -261,27 +260,26 @@ section.partners {
 }
 
 div.col-2 {
-    padding: 10px;
-    }
+  padding: 10px;
+}
 
 div.textgrid {
-    margin: 0px 10px;
+  margin: 0px 10px;
 }
 
 div.stat-details {
-    background-color: white;
-    border-radius: 5px;
-    list-style: none;
-    padding: 15px;
-    text-align: center;
-    width: 40%;
-    height: 250px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5px;
+  background-color: white;
+  border-radius: 5px;
+  list-style: none;
+  padding: 15px;
+  text-align: center;
+  width: 40%;
+  height: 250px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
 }
 
 section.stat {
@@ -333,30 +331,27 @@ p {
   font-size: 13px;
   line-height: 16.9px;
   margin: 0;
-
-}.stat-details {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0;
-    width: 50%;
-    margin-right: 5px;
+}
+.stat-details {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  width: 50%;
+  margin-right: 5px;
 }
 
 .stat-text p {
-    margin: 22.4px 0;
-    max-width: 415px;
-    line-height: 24px;
-    font-size: 14px;
+  margin: 22.4px 0;
+  max-width: 415px;
+  line-height: 24px;
+  font-size: 14px;
 }
-
-
-
 
 /* Offices */
 
 section.offices {
   max-width: 1050px;
-  margin: 88px 4.5px 80px;
+  margin: 80px 80px;
   padding: 0px 20px;
 }
 
@@ -390,13 +385,18 @@ span.btn.btn--small {
   background: #3d83df;
   padding: 10px 15px;
 }
+
+/* Locations */
+
 .locations {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   box-sizing: border-box;
   margin: 88px 0px 80px;
 }
+
 .locations a {
   display: flex;
   flex-direction: column;
