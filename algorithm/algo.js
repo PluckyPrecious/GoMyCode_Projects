@@ -9,8 +9,7 @@ document.write(
     "Hello World! I am Plucky, and a proud FullStack Developer.:" +
     getLength("")
 );
-document.write("<br>");dc
-
+document.write("<br>");
 
 // The number of words in the sentence (assuming that the words are separated by a single space)
 function countWords(str) {
@@ -26,7 +25,6 @@ document.write(
     countWords("Hello World! I am Plucky, and a proud FullStack Developer.")
 );
 document.write("<br>");
-
 
 // The number of vowels in the sentence
 function getVowels(string) {

@@ -213,6 +213,16 @@ h3 {
     margin-top: 10px;
 }
 
+.btn-danger {
+    display: inline-block;
+    background-color: red;
+    color: #FFF;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;  
+}
+
 .buy-now.disabled {
     opacity: 0.6;
 }

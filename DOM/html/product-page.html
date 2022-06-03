@@ -19,6 +19,7 @@
                 <li class="nav-item"><a href="../html/product-page.html">Product Page</a></li>
                 <li class="nav-item"><a href="#">Contact Us</a></li>
                 <li class="nav-item"><a href="#">Sign-up</a></li>
+                <li class="nav-item" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -32,6 +33,7 @@
                 <div class="product-details">
                     <h3 class="product-name">Turmeric</h3>
                     <p>Brand: Root & Powder</p>
+                    <p class="col-1"><img id="heart" src="assets/whiteHeart.png" width="30" height="30"></p>
                     <p>Quantity:
                         <input class="quantity" type="number" placeholder="1" />
                     </p>
@@ -40,7 +42,9 @@
                     <p>Shipping cost: &#x20A6; <span class="shipping-cost">1,000.00</span></p>
                     <p>Total cost: &#x20A6; <span class="total-cost">3,999.00</span></p>
                     <a href="#" class="buy-now">BUY NOW</a>
-                    <a href="./cart.html" class="add-to-cart" method="post">Add to cart</a>
+                   <p> <a href="./cart.html" class="add-to-cart" method="post">Add to cart</a>
+                    <button class="clear-cart btn btn-danger">Clear cart</button>
+                   </p>
                 </div>
             </div>
             <div class="product-desc">
@@ -125,9 +129,8 @@
         </div>
         </div>
 
-        <p class="copyright">Copyright 2021 PreciseSpiceNG All rights reserved</p>
+        <p class="copyright">Copyright 2022 PreciseSpiceNG All rights reserved</p>
     </footer>
-    <script src="../checkoutform.js"></script>
     <script src="../product.js"></script>
 </body>
 

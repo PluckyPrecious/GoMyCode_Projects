@@ -4,8 +4,10 @@ const domElements = {
     shippingCost: document.querySelector('.shipping-cost'),
     totalCost: document.querySelector('.total-cost'),
     buyBtn: document.querySelector('.buy-now'),
-    addToCart: document.querySelector('add_to_cart'),
-    error: document.querySelector('.error')
+    addToCart: document.querySelector('.add_to_cart'),
+    delete: document.querySelector(".delete"),
+    error: document.querySelector('.error'),
+    heart: document.querySelector('.heart'),
 };
 
 //shipping cost
@@ -25,6 +27,13 @@ const calculateShipping = (price) => {
 
     return shippingCost;
 }
+
+// heart like button
+
+
+
+// delete button
+
 
 //total sum
 
