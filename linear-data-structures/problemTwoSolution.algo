@@ -1,0 +1,148 @@
+//find the sum of all common (overlapping) elements from the set of arrays
+
+ALGORITHM Overlapping_sum
+VAR
+    setA : ARRAY_OF INTEGER[50];
+    setB : ARRAY_OF INTEGER[50];
+    mergedSets : ARRAY_OF INTEGER[100];
+    commonElementsArray : ARRAY_OF INTEGER[100];
+    i,j,count : INTEGER
+    
+BEGIN
+
+    Read(setA);
+    Read(setB);
+    
+    //Function to merge set into mergedElementsTab
+    FUNCTION mergeSets(set) : ARRAY_OF INTEGER
+        BEGIN
+        i := 0;
+            FOR i FROM 0 TO set.length - 1  STEP 1  DO
+                mergedElementsTab.push(set[i]);
+                i++;
+            END_FOR
+            RETURN mergedElementsTab ;
+    END //End mergeSets()
+
+    //Run the function for each set
+    mergeSets(setA);
+    mergeSets(setB);
+
+    //Function to retreive Common elements
+    FUNCTION commonElements() : ARRAY_OF type[100];
+        VAR
+            
+        BEGIN
+            i := 0;
+                FOR i FROM 0 TO mergedElementsTab.length - 1  STEP 1  DO
+                    count := 0;
+                    j := 0;
+                    FOR j FROM 0 TO mergedElementsTab.length - 1  STEP 1  DO
+                        IF (mergedElementsTab[i] === mergedElementsTab[j]) THEN
+                            count := count + 1;
+                            j++;
+                        END_IF
+                    END_FOR
+                        IF (count <> 1) THEN
+                            commonElementsArray.push(mergedElementsTab[i])
+                        END_IF
+                    i++;
+                END_FOR
+            RETURN commonElementsArray ;
+    END // End commonElements()
+
+    //Sum the values of commonElementsArray
+    FUNCTION sumFunction() : INTEGER
+        VAR
+            sum: INTEGER := 0;
+            
+        BEGIN
+            i:= 0 ;
+            FOR i FROM 0 TO commonElementsArray.length - 1  STEP 1  DO
+                sum := sum + commonElementsArray[i];
+                i++;
+            END_FOR
+            RETURN sum ;
+    END //End sum()
+
+    commonElements();
+    sumFunction();
+    Write(sum);
+END
+
+
+// Solution Two using a hashtable
+
+ALGORITHM Overlapping_sum
+VAR
+    setA : ARRAY_OF INTEGER[50];
+    setB : ARRAY_OF INTEGER[50];
+    htabMerged : HASH_TABLE<INTEGER,INTEGER>;
+    commonElementsArray : ARRAY_OF INTEGER[100];
+    i,j, count:INTEGER
+BEGIN
+    Read(setA);
+    Read(setB);
+
+    //Create a hashtab with the sets' elements as keys and their count as value
+    FUNCTION mergeSets() : HASH_TABLE
+        VAR
+            
+        BEGIN
+            i := 0;
+            FOR i FROM 0 TO setA.length - 1 STEP 1  DO
+
+                IF (htabMerged.lookup(setA[i])=== true) THEN
+                    count := htabMerged.get(setA[i]);
+                    htabMerged.insert(setA[i], count + 1 );
+                ELSE
+                    htabMerged.insert(setA[i], 1 );
+                END_IF
+            END_FOR
+            j := 0;
+            FOR j FROM 0 TO setB.length - 1 STEP 1  DO
+                IF (htabMerged.lookup(setB[j]) === true) THEN
+                    count := htabMerged.get(setB[j]);
+                    htabMerged.insert(setB[j], count + 1 );
+                ELSE
+                    htabMerged.insert(setB[j], 1 );
+                END_IF
+            END_FOR
+            RETURN htabMerged ;
+    END// End mergeSets()
+
+    //Retrieve common elements from the hashtable and insert them in commonElementsArray
+    FUNCTION uniqueValues() : ARRAY_OF INTEGER[100];
+        VAR
+            
+        BEGIN
+            FOR i FROM 0 TO setA.length - 1 STEP 1  DO
+                IF (htabMerged.get(setA[i]) !== 1) THEN
+                    commonElementsArray.push(setA[i]);
+                END_IF
+            END_FOR
+            FOR j FROM 0 TO setB.length - 1 STEP 1  DO
+                IF (htabMerged.get(setB[j]) !== 1) THEN
+                    commonElementsArray.push(setB[j]);
+                END_IF
+            END_FOR
+            RETURN commonElementsArray ;
+    END // End uniqueValues()
+
+    //sum common elements values
+    FUNCTION sumFunction() : INTEGER
+        VAR
+            
+        BEGIN
+            sum := 0;
+            FOR i FROM 0 TO commonElementsArray.length - 1 STEP 1  DO
+                sum := sum + commonElementsArray[i];
+            END_FOR
+            RETURN sum ;
+    END //End sumFunction()
+
+    mergeSets();
+    uniqueValues();
+    sumFunction();
+    Write(sum);
+END

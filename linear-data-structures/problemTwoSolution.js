@@ -1,1 +1,0 @@
-//find the sum of all common (overlapping) elements from the set of arrays
