@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+h1, h3, p {
+  color: #0d1137;
+}
+.form {
+  display: flex;
+  justify-items: center;
+  background-color: #e52165;
+}
+
+.div-1,
+.form {
+  padding: 40px;
+  margin: auto 0;
+}
+
+.btn Button,
+.btn Button:hover {
+  background-color: #0d1137;
+  border-color: #e52165;
+}
+
+.footer-copyright a {
+  color: #e52165;
+}
