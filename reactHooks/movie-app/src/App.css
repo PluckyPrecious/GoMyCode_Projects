@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  color: rgb(8, 8, 44);
+}
+
+.Navbar,
+.Add {
+  font-family: "Montserrat", sans-serif;
+}
+
+.searchform {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px 0;
+  padding: 15px 0;
+}
+
+.searchbtn {
+  height: 40px;
+}
+
+.MovieCard {
+  margin: 10px;
+}
+
+.MovieList {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.AddMovie {
+  max-width: 50%;
+  margin: 70px auto;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}

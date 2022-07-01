@@ -1,14 +1,21 @@
-export default function MovieCard({ele}) {
-    return (
-        <div className="MovieCard">
-                <div>
-                    </div>
-                    <div >
-                    <h2>{ele.title}</h2>
-                    <p>{ele.description}</p>
-                    <h4>{ele.posterURL}</h4>
-                    <h3>Rate : {ele.rating}</h3>
-                    </div>
-                </div>
-    )
+import { Card } from "react-bootstrap";
+
+export default function MovieCard({ ele }) {
+  return (
+    <div className="MovieCard">
+      <Card style={{ width: '20rem', height: '40rem'  }}>
+      <Card.Body>
+          <Card.Title className="text-danger">{ele.title}</Card.Title>
+          <hr/>
+          <Card.Text className="text-muted"  style={{ height: '10rem' }}>
+          {ele.description}
+          </Card.Text>
+        </Card.Body>
+        <Card.Img variant="top" src={ele.posterURL} alt="Poster"style={{ height: '20rem' }}/>
+        <Card.Footer>
+          <small>Rating: {ele.rating}/10</small>
+        </Card.Footer>
+      </Card>
+    </div>
+  );
 }
