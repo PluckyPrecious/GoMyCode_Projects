@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.319);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-left: 1.5rem;
+    padding: .3rem 0;
+}
+
+.navbar-collapse {
+    margin-right: 3rem;
+}
+
+.navbar-collapse .navbar-nav {
+    display: flex;
+    gap: 3rem;
+    font-size: 20px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+}
+
+.page {
+    margin: 80px 0;
+    min-height: 600px;
+}
+
+.page>.row>p {
+    text-align: center !important;
+    padding: 1rem 0;
+    font-size: 20px;
+}
+
+.row ol {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 20px;
+}
+
+.container-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+div.col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border: 10px solid rgba(255, 255, 255, 0.623);
+    margin-top: 10px;
+    background-color: teal;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    border-radius: 30%;
+}
+
+.specBorder-1 {
+    border-top-left-radius: 25%;
+}
+
+.specBorder-2 {
+    border-bottom-right-radius: 25%;
+}
+
+h3 {
+    color: rgb(0, 0, 0, .5);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer {
+    padding: 12px 20px;
+  border-top: 1px solid rgb(238, 242, 242);
+  min-width: 100%;
+    color: #ababab;
+    margin-top: 10px;
+}
