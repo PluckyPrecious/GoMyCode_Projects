@@ -1,0 +1,38 @@
+.todoApp {
+  padding: 1em;
+  min-height: 100vh;
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.task-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-update form {
+  display: flex;
+  align-items: center;
+  width: 550px;
+}
+.form-container {
+  text-align: center;
+}
+.form-container form {
+  display: flex;
+  width: 40em;
+  margin: 15px auto;
+}
+.search-tasks {
+  margin-right: 70px;
+  display: flex;
+  justify-content: flex-end;
+}
+.search-tasks label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.search-tasks input {
+  margin-left: 8px;
+}
