@@ -1,0 +1,16 @@
+{
+  "name": "mongoose-checkpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kelechi",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.4.4",
+    "nodemon": "^2.0.19"
+  }
+}
