@@ -1,35 +1,24 @@
 const express = require("express");
 require("dotenv").config({ path: "./config/.env" });
-const mongoose = require("mongoose");
+const connectMongoDb = require("./config/connectMongoDb");
+const data = require("./data");
 const person = require("./models/Person");
 
 const app = express();
 Port = process.env.Port || 3000;
 
 //Installing and setting up Mongoose
-
-const connectMongoDb = () => {
-  mongoose
-    .connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-    })
-    .then(() => console.log("Database connected"))
-    .catch(() => console.log(err));
-};
-
 connectMongoDb();
 
 
 //Create and Save a Record of a Model:
 
-person_1 = new person({
+person1 = new person({
   name: "Kels",
   age: 16,
   favoriteFoods: ["Akpu", "Ukazi Soup"],
 });
-person_1.save(function (err, data) {
+person1.save(function (err, data) {
   if (err) return console.error(err);
   console.log("Data inserted succussfully : ", data);
 });
@@ -40,13 +29,9 @@ person_1.save(function (err, data) {
 (async () => {
   try {
     const result = await person.create([
-      { name: "Chito", age: 22, favoriteFoods: ["Fruits", "Veggies"] },
-      { name: "Ayo", age: 24, favoriteFoods: ["Loud", "Native Rice"] },
-      { name: "Jessica", age: 30, favoriteFoods: ["Chicken", "Chips"] },
-      { name: "Nenna", age: 28, favoriteFoods: ["Medemede", "Sharwama"] },
-      { name: "Cece", age: 27, favoriteFoods: ["Snacks", "Tea"] },
-      { name: "Micheal", age: 25, favoriteFoods: ["Martel", "Amala Abula"] },
-      { name: "Isaac", age: 40, favoriteFoods: ["Okra", "Beans Plantain"] },
+      { name: "Eno", age: 40, favoriteFoods: ["Banga and Starch", "Egg and Yam"] },
+      { name: "Samuel", age: 13, favoriteFoods: ["Eba", "Rice"] },
+      { name: "Enyinna", age: 30, favoriteFoods: ["Oat meal", "Pepper Soup"] },
     ]);
     console.log("Multiple records added successfully");
   } catch (error) {
@@ -81,7 +66,7 @@ person_1.save(function (err, data) {
 
 //Use model.findById() to Search Your Database By _id
 
-(async () => {
+/*(async () => {
   try {
     const result = await person.findOne({ _id: "60fabe8c17e2743f20cb42a" });
     console.log("Result of search with Id : ", result);
@@ -89,11 +74,11 @@ person_1.save(function (err, data) {
     console.log(error);
   }
 })();
-
+*/
 
 //Perform Classic Updates by Running Find, Edit, then Save
 
-(async () => {
+/*(async () => {
   try {
     const result = await person.findOne({ _id: "60fabe8c17e2743f20cb42a4" });
     result.favoriteFoods.push("hamburger");
@@ -103,7 +88,7 @@ person_1.save(function (err, data) {
     console.log(error);
   }
 })();
-
+*/
 
 //Perform New Updates on a Document Using model.findOneAndUpdate()
 
@@ -123,7 +108,7 @@ person_1.save(function (err, data) {
 
 //Delete One Document Using model.findByIdAndRemove
 
-(async () => {
+/*(async () => {
   try {
     const result = await person.findByIdAndRemove({
       _id: "60fabf0f6064770808257df6",
@@ -133,11 +118,11 @@ person_1.save(function (err, data) {
     console.log(error);
   }
 })();
-
+*/
 
 //MongoDB and Mongoose - Delete Many Documents with model.remove()
 
-(async () => {
+/*(async () => {
   try {
     person.remove({ name: "Isaac" }, function (err, res) {
       if (err) console.log(err);
@@ -147,15 +132,15 @@ person_1.save(function (err, data) {
     console.log(error);
   }
 })();
-
+*/
 
 //Chain Search Query Helpers to Narrow Search Results
 
 (async () => {
   try {
     await person
-      .find({ favoriteFoods: "burritos" })
-      .sort({ age: 1 })
+      .find({ favoriteFoods: "Cereal" })
+      .sort({ age: 1})
       .limit(2)
       .select({ age: false })
       .exec()
